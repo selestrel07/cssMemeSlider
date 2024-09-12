@@ -1,10 +1,17 @@
+:root{
+  --background-color: #292828;
+  --control-default-color: #3b3491;
+  --control-hover-color: #adbbc4;
+  --font-color: aliceblue;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background-color: #292828;
+  background-color: var(--background-color);
 }
 
 .wrapper {
@@ -20,7 +27,7 @@ body {
   position: relative;
   width: 90%;
   overflow: hidden;
-  border-radius: 5%;
+  border-radius: 3%;
   height: 60vw;
   max-height: 613px;
 }
@@ -55,13 +62,15 @@ body {
 
 .caption {
   position: absolute;
+  display: flex;
+  justify-content: space-between;
   width: 400%;
 }
 
 .caption span {
   display: inline-block;
   width: 24.85%;
-  color: aliceblue;
+  color: var(--font-color);
   font-size: 1.5em;
 }
 
@@ -78,18 +87,25 @@ body {
 }
 
 .control {
-  width: 20px;
-  height: 20px;
-  border: 3px solid #304e5f;
+  width: 15px;
+  height: 15px;
+  border: 3px solid var(--control-default-color);
+  background-color:  var(--control-default-color);
   border-radius: 50%;
 }
 
 .active {
-  background-color: #8aa1af;
-  border: 3px solid #8aa1af;
+  border: 3px solid  var(--control-default-color);
+  background-color: var(--background-color);
 }
 
 .controls li:hover .control {
-  border: 3px solid #8aa1af;
+  border: 3px solid var(--control-hover-color);
+  background-color: var(--control-hover-color);
+}
+
+.controls li:hover .control.active {
+  border: 3px solid var(--control-hover-color);
+  background-color: var(--background-color);
 }
 
