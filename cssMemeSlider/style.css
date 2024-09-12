@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #292828;
+}
+
+.wrapper {
+  max-width: 1024px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.slide-wrapper {
+  position: relative;
+  width: 90%;
+  overflow: hidden;
+  border-radius: 5%;
+  height: 60vw;
+  max-height: 613px;
+}
+
+.slides {
+  position: absolute;
+  left: 0;
+  width: 400%;
+  height: 100%;
+  max-height: inherit;
+}
+
+.slide {
+  display: inline-block;
+  width: 25%;
+  height: 100%;
+  max-height: inherit;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  height: 50px;
+}
+
+.caption-wrapper {
+  position: relative;
+  width: 70%;
+  overflow: hidden;
+}
+
+.caption {
+  position: absolute;
+  width: 400%;
+}
+
+.caption span {
+  display: inline-block;
+  width: 24.85%;
+  color: aliceblue;
+  font-size: 1.5em;
+}
+
+.controls {
+  list-style: none;
+  display: flex;
+  gap: 3px;
+  justify-content: end;
+  width: 25%;
+}
+
+.controls li {
+  cursor: pointer;
+}
+
+.control {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #304e5f;
+  border-radius: 50%;
+}
+
+.active {
+  background-color: #8aa1af;
+  border: 3px solid #8aa1af;
+}
+
+.controls li:hover .control {
+  border: 3px solid #8aa1af;
+}
+
