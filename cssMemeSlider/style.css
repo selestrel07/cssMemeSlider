@@ -118,11 +118,15 @@ body {
 @media screen and (width < 650px) {
   .info {
     flex-direction: column-reverse;
-    gap: 1.5rem;
     height: fit-content;
   }
 
   .controls {
     align-self: center;
+    height: 50px;
+  }
+
+  .caption-wrapper {
+    width: 100%;
   }
 }
