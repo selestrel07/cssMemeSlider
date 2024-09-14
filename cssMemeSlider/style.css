@@ -3,6 +3,7 @@
   --control-default-color: #3b3491;
   --control-hover-color: #adbbc4;
   --font-color: aliceblue;
+  --transition-time: 0.5s;
 }
 
 * {
@@ -34,10 +35,12 @@ body {
 
 .slides {
   position: absolute;
+  display: flex;
   left: 0;
   width: 400%;
   height: 100%;
   max-height: inherit;
+  transition: linear var(--transition-time);
 }
 
 .slide {
@@ -65,6 +68,8 @@ body {
   display: flex;
   justify-content: space-between;
   width: 400%;
+  left: 0;
+  transition: linear var(--transition-time);
 }
 
 .caption span {
