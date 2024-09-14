@@ -61,6 +61,7 @@ body {
   position: relative;
   width: 70%;
   overflow: hidden;
+  min-height: 1.5rem;
 }
 
 .caption {
@@ -76,7 +77,7 @@ body {
   display: inline-block;
   width: 24.85%;
   color: var(--font-color);
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .controls {
@@ -112,4 +113,16 @@ body {
 .controls li:hover .control.active {
   border: 3px solid var(--control-hover-color);
   background-color: var(--background-color);
+}
+
+@media screen and (width < 650px) {
+  .info {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+    height: fit-content;
+  }
+
+  .controls {
+    align-self: center;
+  }
 }
