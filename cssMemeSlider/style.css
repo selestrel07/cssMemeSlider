@@ -38,9 +38,7 @@ input {
 }
 
 .slides {
-  position: absolute;
   display: flex;
-  left: 0;
   width: 400%;
   height: 100%;
   max-height: inherit;
@@ -69,11 +67,9 @@ input {
 }
 
 .caption {
-  position: absolute;
   display: flex;
   justify-content: space-between;
   width: 400%;
-  left: 0;
   transition: linear var(--transition-time);
 }
 
