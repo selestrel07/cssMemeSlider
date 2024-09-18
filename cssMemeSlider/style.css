@@ -1,0 +1,190 @@
+:root{
+  --background-color: #292828;
+  --control-default-color: #3b3491;
+  --control-hover-color: #adbbc4;
+  --font-color: aliceblue;
+  --transition-time: 0.5s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+input {
+  display: none;
+}
+
+.wrapper {
+  max-width: 1024px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.slide-wrapper {
+  position: relative;
+  width: 90%;
+  overflow: hidden;
+  border-radius: 3%;
+  height: 60vw;
+  max-height: 613px;
+}
+
+.slides {
+  display: flex;
+  width: 400%;
+  height: 100%;
+  max-height: inherit;
+  transition: linear var(--transition-time);
+}
+
+.slide {
+  display: inline-block;
+  width: 25%;
+  height: 100%;
+  max-height: inherit;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  height: 50px;
+}
+
+.caption-wrapper {
+  position: relative;
+  width: 70%;
+  overflow: hidden;
+  min-height: 1.5rem;
+}
+
+.caption {
+  display: flex;
+  justify-content: space-between;
+  width: 400%;
+  transition: linear var(--transition-time);
+}
+
+.caption span {
+  display: inline-block;
+  width: 24.85%;
+  color: var(--font-color);
+  font-size: 1.5rem;
+}
+
+.controls {
+  list-style: none;
+  display: flex;
+  gap: 3px;
+  justify-content: end;
+  width: 25%;
+}
+
+.controls label {
+  cursor: pointer;
+}
+
+.control {
+  width: 15px;
+  height: 15px;
+  border: 3px solid var(--control-default-color);
+  background-color:  var(--control-default-color);
+  border-radius: 50%;
+}
+
+.controls label:hover .control {
+  border: 3px solid var(--control-hover-color);
+  background-color: var(--control-hover-color);
+}
+
+#radio-button1:checked~.slide-wrapper .slides {
+  transform: translateX(0);
+}
+
+#radio-button2:checked~.slide-wrapper .slides {
+  transform: translateX(-25%);
+}
+
+#radio-button3:checked~.slide-wrapper .slides {
+  transform: translateX(-50%);
+}
+
+#radio-button4:checked~.slide-wrapper .slides {
+  transform: translateX(-75%);
+}
+
+#radio-button1:checked~.info .caption {
+  transform: translateX(0);
+}
+
+#radio-button2:checked~.info .caption {
+  transform: translateX(-25%);
+}
+
+#radio-button3:checked~.info .caption {
+  transform: translateX(-50%);
+}
+
+#radio-button4:checked~.info .caption {
+  transform: translateX(-75%);
+}
+
+#radio-button1:checked~.info label[for="radio-button1"] .control {
+  border: 3px solid  var(--control-default-color);
+  background-color: var(--background-color);
+}
+
+#radio-button2:checked~.info label[for="radio-button2"] .control {
+  border: 3px solid  var(--control-default-color);
+  background-color: var(--background-color);
+}
+
+#radio-button3:checked~.info label[for="radio-button3"] .control {
+  border: 3px solid  var(--control-default-color);
+  background-color: var(--background-color);
+}
+
+#radio-button4:checked~.info label[for="radio-button4"] .control {
+  border: 3px solid  var(--control-default-color);
+  background-color: var(--background-color);
+}
+
+#radio-button1:checked~.info label[for="radio-button1"]:hover .control {
+  border: 3px solid var(--control-hover-color);
+  background-color: var(--background-color);
+}
+
+#radio-button2:checked~.info label[for="radio-button2"]:hover .control {
+  border: 3px solid var(--control-hover-color);
+  background-color: var(--background-color);
+}
+
+#radio-button3:checked~.info label[for="radio-button3"]:hover .control {
+  border: 3px solid var(--control-hover-color);
+  background-color: var(--background-color);
+}
+
+#radio-button4:checked~.info label[for="radio-button4"]:hover .control {
+  border: 3px solid var(--control-hover-color);
+  background-color: var(--background-color);
+}
+
+@media screen and (width < 650px) {
+  .info {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+    height: fit-content;
+  }
+
+  .controls {
+    align-self: center;
+  }
+}
