@@ -8,6 +8,10 @@
 </head>
 <body>
   <main class="wrapper">
+    <input type="radio" name="radio-btn" id="radio-button1">
+    <input type="radio" name="radio-btn" id="radio-button2">
+    <input type="radio" name="radio-btn" id="radio-button3">
+    <input type="radio" name="radio-btn" id="radio-button4">
     <div class="slide-wrapper">
       <div class="slides">
         <img class="slide" src="./assets/images/be_yourself.jpg" alt="I like my body and my body likes sport">
@@ -26,13 +30,12 @@
         </div>
       </div>
       <ul class="controls">
-        <li onclick="changeSlide(this, 0)"><div class="control active" num="0"></div></li>
-        <li onclick="changeSlide(this, 1)"><div class="control" num="1"></div></li>
-        <li onclick="changeSlide(this, 2)"><div class="control" num="2"></div></li>
-        <li onclick="changeSlide(this, 3)"><div class="control" num="3"></div></li>
+        <label for="radio-button1"><li><div class="control"></div></li></label> 
+        <label for="radio-button2"><li><div class="control"></div></li></label>
+        <label for="radio-button3"><li><div class="control"></div></li></label>
+        <label for="radio-button4"><li><div class="control"></div></li></label>
       </ul>
     </div>
   </main>
-  <script src="script.js"></script>
 </body>
 </html>

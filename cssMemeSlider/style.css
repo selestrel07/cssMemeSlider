@@ -15,6 +15,10 @@ body {
   background-color: var(--background-color);
 }
 
+input {
+  display: none;
+}
+
 .wrapper {
   max-width: 1024px;
   margin: 50px auto;
@@ -88,7 +92,7 @@ body {
   width: 25%;
 }
 
-.controls li {
+.controls label {
   cursor: pointer;
 }
 
@@ -100,17 +104,79 @@ body {
   border-radius: 50%;
 }
 
-.active {
-  border: 3px solid  var(--control-default-color);
-  background-color: var(--background-color);
-}
-
-.controls li:hover .control {
+.controls label:hover .control {
   border: 3px solid var(--control-hover-color);
   background-color: var(--control-hover-color);
 }
 
-.controls li:hover .control.active {
+#radio-button1:checked~.slide-wrapper .slides {
+  transform: translateX(0);
+}
+
+#radio-button2:checked~.slide-wrapper .slides {
+  transform: translateX(-25%);
+}
+
+#radio-button3:checked~.slide-wrapper .slides {
+  transform: translateX(-50%);
+}
+
+#radio-button4:checked~.slide-wrapper .slides {
+  transform: translateX(-75%);
+}
+
+#radio-button1:checked~.info .caption {
+  transform: translateX(0);
+}
+
+#radio-button2:checked~.info .caption {
+  transform: translateX(-25%);
+}
+
+#radio-button3:checked~.info .caption {
+  transform: translateX(-50%);
+}
+
+#radio-button4:checked~.info .caption {
+  transform: translateX(-75%);
+}
+
+#radio-button1:checked~.info label[for="radio-button1"] .control {
+  border: 3px solid  var(--control-default-color);
+  background-color: var(--background-color);
+}
+
+#radio-button2:checked~.info label[for="radio-button2"] .control {
+  border: 3px solid  var(--control-default-color);
+  background-color: var(--background-color);
+}
+
+#radio-button3:checked~.info label[for="radio-button3"] .control {
+  border: 3px solid  var(--control-default-color);
+  background-color: var(--background-color);
+}
+
+#radio-button4:checked~.info label[for="radio-button4"] .control {
+  border: 3px solid  var(--control-default-color);
+  background-color: var(--background-color);
+}
+
+#radio-button1:checked~.info label[for="radio-button1"]:hover .control {
+  border: 3px solid var(--control-hover-color);
+  background-color: var(--background-color);
+}
+
+#radio-button2:checked~.info label[for="radio-button2"]:hover .control {
+  border: 3px solid var(--control-hover-color);
+  background-color: var(--background-color);
+}
+
+#radio-button3:checked~.info label[for="radio-button3"]:hover .control {
+  border: 3px solid var(--control-hover-color);
+  background-color: var(--background-color);
+}
+
+#radio-button4:checked~.info label[for="radio-button4"]:hover .control {
   border: 3px solid var(--control-hover-color);
   background-color: var(--background-color);
 }
